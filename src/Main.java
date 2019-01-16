@@ -1,19 +1,30 @@
 import java.util.HashSet;
+import java.util.List;
 import java.util.Set;
 
 public class Main {
     public static void main(String[] args) {
-        Point p = new Point(3,4);
-        Set<Point> set = new HashSet<>();
-        set.add(p);
+        List<String> l;
+        Point p = new Point(3, 4);
+        Point p2 = new Point(3, 4);
+        Point p3 = new Point (5, 6);
+        System.out.println(p.equals(p2));
+        System.out.println(p.equals(p3));
 
-        Point p2 = new Point(3,4);
-        System.out.println(set.contains(p));
-        System.out.println(set.contains(p2));
-
-        p.translate(2,2);
-        System.out.println(set.contains(p));
-        System.out.println(set.contains(new Point(5,6)));
+        System.out.println(p.hashCode());
+        System.out.println(p2.hashCode());
+        System.out.println(p3.hashCode());
+        //        Point p = new Point(3,4);
+//        Set<Point> set = new HashSet<>();
+//        set.add(p);
+//
+//        Point p2 = new Point(3,4);
+//        System.out.println(set.contains(p)); //true
+//        System.out.println(set.contains(p2)); //false
+//
+//        p.translate(2,2);
+//        System.out.println(set.contains(p)); //true
+//        System.out.println(set.contains(new Point(5,6))); //false
 
 //        Point3D p3d = new Point3D(1, 2, 3);
 //        System.out.println(p3d instanceof Point);
