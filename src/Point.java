@@ -28,7 +28,7 @@ public class Point {
 
     @Override
     public boolean equals(Object obj) {
-        if(obj.getClass() == getClass()){ // if(obj instanceof Point){
+        if(obj!= null && obj.getClass() == getClass()){ // if(obj instanceof Point){
             Point p = (Point) obj;
             return (x == p.x && y == p.y);
         }else{
